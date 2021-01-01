@@ -1,5 +1,7 @@
 package controller;
 
+import model.Shape;
+
 public interface DrawingEngine {
 	
 	/* redraw all shapes on the canvas */

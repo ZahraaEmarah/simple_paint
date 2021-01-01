@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Graphics;
+
 public interface Shape {
 	public void setPosition(java.awt.Point position);
 
@@ -22,8 +24,8 @@ public interface Shape {
 	 * redraw the shape on the canvas, for swing, you will cast canvas to
 	 * java.awt.Graphics
 	 */
-	public void draw(Object canvas);
+	public void draw(Graphics canvas);
 
-	/* create a deep clone of the shape */
-	public Object clone() throws CloneNotSupportedException;
+	/* create a deep clone of the shape 
+	public Object clone() throws CloneNotSupportedException;*/
 }
