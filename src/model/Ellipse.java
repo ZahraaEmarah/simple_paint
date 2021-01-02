@@ -1,18 +1,27 @@
 package model;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.util.HashMap;
 
 public class Ellipse extends EllipticShapes{
-
-	private int r1,r2;
 	
-	public Ellipse(int x, int y, int r1, int r2) {
-		this.r1 = r1;
-		this.r2 = r2;
+	public Ellipse(double height, double width, Color c, Color fill) {
+		pos = new Point();
+		prop = new HashMap<String, Double>();
+		prop.put("height", height);
+		prop.put("width", width);
+		color = c; 
+        fill_color = fill;
 	}
 
 	@Override
 	public void draw(Graphics canvas) {
 		// TODO Auto-generated method stub
+		canvas.setColor(color);
+		canvas.drawOval(pos.x, pos.y, prop.get("weight").intValue(), prop.get("height").intValue());
+		canvas.setColor(fill_color);
+		canvas.fillOval(pos.x, pos.y, prop.get("weight").intValue(), prop.get("height").intValue());
 	}
 }

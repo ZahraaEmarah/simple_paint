@@ -12,7 +12,6 @@ public abstract class EllipticShapes implements Shape {
 	protected Map<String, Double> prop;
 	protected Point pos;
 
-
 	@Override
 	public void setPosition(Point position) {
 		// TODO Auto-generated method stub

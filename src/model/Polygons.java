@@ -11,7 +11,6 @@ public abstract class Polygons implements Shape {
     protected Color fill_color;
     protected Map<String, Double> prop;
     protected Point pos;
-	
 
 	@Override
 	public void setPosition(Point position) {
