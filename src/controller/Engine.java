@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,15 +15,19 @@ public class Engine implements DrawingEngine {
 	}
 
 	@Override
-	public void refresh(Object canvas) {
+	public void refresh(Graphics canvas) {
 		// TODO Auto-generated method stub
-
+		for (Shape s : my_shapes)
+			s.draw(canvas);
 	}
 
 	@Override
 	public void addShape(Shape shape) {
 		// TODO Auto-generated method stub
 		my_shapes.add(shape);
+		
+		for (Shape s: my_shapes)
+		    System.out.println(s.getPosition());
 	}
 
 	@Override
@@ -45,7 +50,11 @@ public class Engine implements DrawingEngine {
 	@Override
 	public Shape[] getShapes() {
 		// TODO Auto-generated method stub
-		return null;
+		if (my_shapes.size() == 0) {
+            return new Shape[] {};
+        }
+        Shape[] shapesArray = my_shapes.toArray(new Shape[my_shapes.size()]);
+        return shapesArray;
 	}
 
 	@Override

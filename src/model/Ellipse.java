@@ -20,8 +20,8 @@ public class Ellipse extends EllipticShapes{
 	public void draw(Graphics canvas) {
 		// TODO Auto-generated method stub
 		canvas.setColor(color);
-		canvas.drawOval(pos.x, pos.y, prop.get("weight").intValue(), prop.get("height").intValue());
+		canvas.drawOval(pos.x, pos.y, prop.get("width").intValue(), prop.get("height").intValue());
 		canvas.setColor(fill_color);
-		canvas.fillOval(pos.x, pos.y, prop.get("weight").intValue(), prop.get("height").intValue());
+		canvas.fillOval(pos.x, pos.y, prop.get("width").intValue(), prop.get("height").intValue());
 	}
 }

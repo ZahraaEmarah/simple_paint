@@ -1,11 +1,13 @@
 package controller;
 
+import java.awt.Graphics;
+
 import model.Shape;
 
 public interface DrawingEngine {
 	
 	/* redraw all shapes on the canvas */
-	public void refresh(Object canvas);
+	public void refresh(Graphics canvas);
 
 	public void addShape(Shape shape);
 

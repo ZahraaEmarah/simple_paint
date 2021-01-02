@@ -20,9 +20,9 @@ public class Rectangle extends Polygons {
 	public void draw(Graphics canvas) {
 		// TODO Auto-generated method stub
 		canvas.setColor(color);
-		canvas.drawRect(pos.x, pos.y, prop.get("weight").intValue(), prop.get("height").intValue());
+		canvas.drawRect(pos.x, pos.y, prop.get("width").intValue(), prop.get("height").intValue());
 		canvas.setColor(fill_color);
-		canvas.fillRect(pos.x, pos.y, prop.get("weight").intValue(), prop.get("height").intValue());
+		canvas.fillRect(pos.x, pos.y, prop.get("width").intValue(), prop.get("height").intValue());
 	}
 
 }
