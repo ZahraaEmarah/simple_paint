@@ -17,17 +17,21 @@ public class Engine implements DrawingEngine {
 	@Override
 	public void refresh(Graphics canvas) {
 		// TODO Auto-generated method stub
-		for (Shape s : my_shapes)
+		for (Shape s : my_shapes) {
+			System.out.println(s.getPosition());
+			System.out.println(s.getProperties());
+			System.out.println(s.getColor());
+			System.out.println(s.getFillColor());
+
 			s.draw(canvas);
+		}
 	}
 
 	@Override
 	public void addShape(Shape shape) {
 		// TODO Auto-generated method stub
 		my_shapes.add(shape);
-		
-		for (Shape s: my_shapes)
-		    System.out.println(s.getPosition());
+		System.out.println(my_shapes.size());
 	}
 
 	@Override
@@ -51,10 +55,10 @@ public class Engine implements DrawingEngine {
 	public Shape[] getShapes() {
 		// TODO Auto-generated method stub
 		if (my_shapes.size() == 0) {
-            return new Shape[] {};
-        }
-        Shape[] shapesArray = my_shapes.toArray(new Shape[my_shapes.size()]);
-        return shapesArray;
+			return new Shape[] {};
+		}
+		Shape[] shapesArray = my_shapes.toArray(new Shape[my_shapes.size()]);
+		return shapesArray;
 	}
 
 	@Override

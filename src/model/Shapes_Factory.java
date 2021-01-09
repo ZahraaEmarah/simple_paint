@@ -1,25 +1,23 @@
 package model;
 
-import java.awt.Color;
-import java.util.Map;
 
 public class Shapes_Factory {
 
-    public Shape create_a_shape(String shape_name, int height, int width, Color color, Color fill)
+    public Shape create_a_shape(String shape_name)
     {
         if (shape_name == null || shape_name.isEmpty())
             return null;
         if ("square".equals(shape_name)) {
-            return new Square(height, color, fill);
+            return new Square();
         }
         else if ("rectangle".equals(shape_name)) {
-            return new Rectangle(height, width, color, fill);
+            return new Rectangle();
         }
         else if ("circle".equals(shape_name)) {
-            return new Circle(height, color, fill);
+            return new Circle();
         }
         else if ("ellipse".equals(shape_name)) {
-            return new Ellipse(height, width, color, fill);
+            return new Ellipse();
         }
         return null;
     }
