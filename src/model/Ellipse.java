@@ -8,7 +8,8 @@ public class Ellipse extends EllipticShapes{
 	
 	public Ellipse() {
 		super();
-		pos = new Point();
+		start_pos = new Point();
+		end_pos = new Point();
 		prop = new HashMap<String, Double>();
 	}
 
@@ -16,8 +17,8 @@ public class Ellipse extends EllipticShapes{
 	public void draw(Graphics canvas) {
 		// TODO Auto-generated method stub
 		canvas.setColor(color);
-		canvas.drawOval(pos.x, pos.y, prop.get("N2").intValue(), prop.get("N1").intValue());
+		canvas.drawOval(start_pos.x, start_pos.y, prop.get("N2").intValue(), prop.get("N1").intValue());
 		canvas.setColor(fill_color);
-		canvas.fillOval(pos.x, pos.y, prop.get("N2").intValue(), prop.get("N1").intValue());
+		canvas.fillOval(start_pos.x, start_pos.y, prop.get("N2").intValue(), prop.get("N1").intValue());
 	}
 }

@@ -3,9 +3,13 @@ package model;
 import java.awt.Graphics;
 
 public interface Shape {
-	public void setPosition(java.awt.Point position);
+	public void setStartPosition(java.awt.Point position);
+	
+	public void setEndPosition(java.awt.Point position);
 
-	public java.awt.Point getPosition();
+	public java.awt.Point getStartPosition();
+	
+	public java.awt.Point getEndPosition();
 
 	/* update shape specific properties (e.g., radius) */
 	public void setProperties(java.util.Map<String, Double> properties);

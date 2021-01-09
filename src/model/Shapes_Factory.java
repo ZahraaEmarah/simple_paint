@@ -19,6 +19,9 @@ public class Shapes_Factory {
         else if ("ellipse".equals(shape_name)) {
             return new Ellipse();
         }
+        else if ("line".equals(shape_name)) {
+            return new Line();
+        }
         return null;
     }
 

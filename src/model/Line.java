@@ -3,62 +3,88 @@ package model;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Line implements Shape{
-
+	
+	protected Color color;
+	protected Color fill_color;
+	protected Map<String, Double> prop;
+	protected Point start_pos;
+	protected Point end_pos;
+	
+	public Line() {
+		start_pos = new Point();
+		end_pos = new Point();
+		prop = new HashMap<String, Double>();
+	}
+	
 	@Override
-	public void setPosition(Point position) {
+	public void setStartPosition(Point position) {
 		// TODO Auto-generated method stub
-		
+		start_pos = position;
 	}
 
 	@Override
-	public Point getPosition() {
+	public Point getStartPosition() {
 		// TODO Auto-generated method stub
-		return null;
+		return start_pos;
+	}
+	
+	@Override
+	public void setEndPosition(Point position) {
+		// TODO Auto-generated method stub
+		end_pos = position;
+	}
+
+	@Override
+	public Point getEndPosition() {
+		// TODO Auto-generated method stub
+		return end_pos;
 	}
 
 	@Override
 	public void setProperties(Map<String, Double> properties) {
 		// TODO Auto-generated method stub
-		
+		prop = properties;
 	}
 
 	@Override
 	public Map<String, Double> getProperties() {
 		// TODO Auto-generated method stub
-		return null;
+		return prop;
 	}
 
 	@Override
 	public void setColor(Color color) {
 		// TODO Auto-generated method stub
-		
+		this.color = color;
 	}
 
 	@Override
 	public Color getColor() {
 		// TODO Auto-generated method stub
-		return null;
+		return color;
 	}
 
 	@Override
 	public void setFillColor(Color color) {
 		// TODO Auto-generated method stub
-		
+		fill_color = color;
 	}
 
 	@Override
 	public Color getFillColor() {
 		// TODO Auto-generated method stub
-		return null;
+		return fill_color;
 	}
 
 	@Override
 	public void draw(Graphics canvas) {
 		// TODO Auto-generated method stub
-		//canvas.drawLine(arg0, arg1, arg2, arg3);
+		canvas.setColor(color);
+		canvas.drawLine(start_pos.x, start_pos.y, prop.get("N1").intValue(), prop.get("N1").intValue());
 	}
 
 }

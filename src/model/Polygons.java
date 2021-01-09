@@ -10,18 +10,31 @@ public abstract class Polygons implements Shape {
     protected Color color;
     protected Color fill_color;
     protected Map<String, Double> prop;
-    protected Point pos;
+    protected Point start_pos;
+    protected Point end_pos;
 
 	@Override
-	public void setPosition(Point position) {
+	public void setStartPosition(Point position) {
 		// TODO Auto-generated method stub
-		pos = position;
+		start_pos = position;
 	}
 
 	@Override
-	public Point getPosition() {
+	public Point getStartPosition() {
 		// TODO Auto-generated method stub
-		return pos;
+		return start_pos;
+	}
+	
+	@Override
+	public void setEndPosition(Point position) {
+		// TODO Auto-generated method stub
+		end_pos = position;
+	}
+
+	@Override
+	public Point getEndPosition() {
+		// TODO Auto-generated method stub
+		return end_pos;
 	}
 
 	@Override

@@ -18,10 +18,11 @@ public class Engine implements DrawingEngine {
 	public void refresh(Graphics canvas) {
 		// TODO Auto-generated method stub
 		for (Shape s : my_shapes) {
-			System.out.println(s.getPosition());
+			System.out.println(s.getStartPosition());
+			System.out.println(s.getEndPosition());
 			System.out.println(s.getProperties());
 			System.out.println(s.getColor());
-			System.out.println(s.getFillColor());
+			System.out.println(s.getFillColor() + "\n");
 
 			s.draw(canvas);
 		}

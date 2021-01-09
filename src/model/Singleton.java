@@ -1,19 +1,18 @@
 package model;
 
+import view.Canvas;
+
 public class Singleton {
     
 	private static Singleton instance;
-	private static Shapes_Factory shapeFactory;
-	public static Shape shape;
     
-	private Singleton(String name) {
-		shapeFactory = new Shapes_Factory();
-		shape = shapeFactory.create_a_shape(name);
+	private Singleton(Canvas c) {
+		c = new Canvas();
 	}
     
-	public static Singleton getInstance(String n) {
+	public static Singleton getInstance(Canvas c) {
 		if (instance==null)
-			instance = new Singleton(n);
+			instance = new Singleton(c);
 		return instance;
 	}
 }

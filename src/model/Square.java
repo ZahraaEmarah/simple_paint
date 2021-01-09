@@ -9,7 +9,8 @@ public class Square extends Polygons{
 	public Square() {
 		// TODO Auto-generated constructor stub
 		super();
-		pos = new Point();
+		start_pos = new Point();
+		end_pos = new Point();
 		prop = new HashMap<String, Double>();
 	}
 	
@@ -17,9 +18,9 @@ public class Square extends Polygons{
 	public void draw(Graphics canvas) {
 		// TODO Auto-generated method stub
 		canvas.setColor(color);
-		canvas.drawRect(pos.x, pos.y, prop.get("N1").intValue(), prop.get("N1").intValue());
+		canvas.drawRect(start_pos.x, start_pos.y, prop.get("N1").intValue(), prop.get("N1").intValue());
 		canvas.setColor(fill_color);
-		canvas.fillRect(pos.x, pos.y, prop.get("N1").intValue(), prop.get("N1").intValue());
+		canvas.fillRect(start_pos.x, start_pos.y, prop.get("N1").intValue(), prop.get("N1").intValue());
 	}
 
 }
